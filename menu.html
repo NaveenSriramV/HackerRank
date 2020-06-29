@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+
+    
+    <link href="assets/css/font-awesome.css" rel="stylesheet">    
+    <link href="assets/css/bootstrap.css" rel="stylesheet">      
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">        
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datepicker.css">        
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">     
+    <link href="style.css" rel="stylesheet"> 
+       
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>        
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
+   
+      
+  </head> 
+  <script type="text/javascript">
+  	
+  	var cartCount=0;
+  	function addToCart(){
+  		cartCount+=1;
+  		document.getElementById('cart').innerHTML="["+cartCount+"]";
+  		alert("YOUR FOOD IS SUCCESSFULLY ADDED TO THE CART")
+  	}
+  </script>
+  <script type="text/javascript">
+  	
+  	function ordernow(item){
+  		item=item+=1;
+  		alert("YOUR ORDER WILL BE ARRIVED IN 5 MINUTES")
+  		localStorage.setItem('item',item)
+  		
+  	}
+  </script>
+  <body>
+  	
+  	
+  <div id="aa-preloader-area">
+    <div class="mu-preloader">
+      <img src="assets/img/preloader.gif" alt=" loader img">
+    </div>
+  </div>
+
+ <div id="navbar" class="navbar-collapse collapse" style="background-color: black;">
+
+          <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
+
+            <li><a href="Restaurant.html" style="color:salmon;">HOME</a></li>
+                                   
+            <li><a href="menu.html" style="color:salmon;">MENU</a></li> 
+           
+        <button type="button" class="btn btn-default btn-lg" style="color:salmon;">
+        
+        <li><a href="#" class="glyphicon glyphicon-shopping-cart" style="color:salmon;">
+        	
+        	
+        </a>
+        <span id="cart"></span>
+    </li>
+        </button>                                                                 
+              </ul>                            
+        </div>
+  <section id="mu-restaurant-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-restaurant-menu-area">
+            <div class="mu-title">
+
+              <span class="mu-subtitle">Delicious Food</span>
+              <h5 class="mu-subtitle" style="color:black;">MENU</h5>
+              <i class="fa fa-spoon"></i>              
+              <span class="mu-title-bar"></span>
+            </div>
+            <div class="mu-restaurant-menu-content">
+              <ul class="nav nav-tabs mu-restaurant-menu">
+                <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>
+                <li><a href="#lunch" data-toggle="tab">Lunch</a></li>
+                <li><a href="#dinner" data-toggle="tab">Dinner</a></li>
+              </ul>
+
+
+              <div class="tab-content">
+                <div class="tab-pane fade in active" id="breakfast">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/idly.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Idly</a></h4>
+                                  <span class="mu-menu-price" >Rs.20
+                                  </span>
+                                  <br>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow('idly')">Order now</a></p>
+                              
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/dosa.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Dosa</a></h4>
+                                  <span class="mu-menu-price">Rs.30</span>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"  onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/barotta.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Parotta</a></h4>
+                                  <span class="mu-menu-price">Rs.15</span>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"  onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/pongal.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">pongal</a></h4>
+                                  <span class="mu-menu-price">Rs.25</span>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                  
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/poori.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Poori</a></h4>
+                                  <span class="mu-menu-price">Rs.15</span>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/idiyappam.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Idiyappam</a></h4>
+                                  <span class="mu-menu-price">Rs.10</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+                <div class="tab-pane fade " id="lunch">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/sambar.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Sambar Rice</a></h4>
+                                  <span class="mu-menu-price">Rs.30</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/biriyani.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Biriyani</a></h4>
+                                  <span class="mu-menu-price">Rs.120</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/chickenrice.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chicken Rice</a></h4>
+                                  <span class="mu-menu-price">Rs.100</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+                     <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/minimeals.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">mini meals</a></h4>
+                                  <span class="mu-menu-price">Rs.150</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/eggrice.jpg" width="100" height="100"alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Egg Rice</a></h4>
+                                  <span class="mu-menu-price">Rs.80</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/barotta.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Parotta</a></h4>
+                                  <span class="mu-menu-price">Rs.20</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+                <div class="tab-pane fade " id="dinner">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mu-tab-content-left">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/biriyani.jpg" width="100" height="100"alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Biriyani</a></h4>
+                                  <span class="mu-menu-price">Rs.120</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/chickenrice.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Chicken Rice</a></h4>
+                                  <span class="mu-menu-price">Rs.100</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                             <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/eggrice.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Egg Rice</a></h4>
+                                  <span class="mu-menu-price">Rs.80</span>
+                                  	<p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>   
+                        </div>
+                      </div>
+                       <div class="col-md-6">
+                       <div class="mu-tab-content-right">
+                          <ul class="mu-menu-item-nav">
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/vegrice.jpg"width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">veg rice</a></h4>
+                                  <span class="mu-menu-price">Rs.70</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                    <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/barotta.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Parotta</a></h4>
+                                  <span class="mu-menu-price">Rs.20</span>
+                                  <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="assets/img/menu/dosa.jpg" width="100" height="100" alt="img">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                  <h4 class="media-heading"><a href="#">Dosa</a></h4>
+                                  <span class="mu-menu-price">Rs.30</span>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple"  onclick="ordernow()">Order now</a></p>
+                                   <p><a href="#" class="mu-readmore-btn" style="color:purple" onclick="addToCart()">Add to cart</a></p>
+                                </div>
+                              </div>
+                            </li>
+  </section>
+
+         
+                                                            
+         
+       
+  
+ 
+  <script src="assets/js/jquery.min.js"></script> 
+  <script src="assets/js/bootstrap.js"></script>   
+  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <script type="text/javascript" src="assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script> 
+  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>        
+  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+  <script src="assets/js/custom.js"></script> 
+
+</body>
+ </html>
